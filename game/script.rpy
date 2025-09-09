@@ -25,16 +25,22 @@ label start:
     # These display lines of dialogue.
 
     e "You've created a new Ren'Py game."
+    # worst code ever devised to open a text file LOL
     python:
-        # thank you google for giving me the command to open stuff https://www.geeksforgeeks.org/python/find-path-to-the-given-file-using-python/
+        # thank you google for giving me the command to open stuff i hat epython https://www.geeksforgeeks.org/python/find-path-to-the-given-file-using-python/
         from pathlib import Path
         print(Path.cwd())
     # This assigns the path to a variable so it can be joined with the known path next
     $ directory = Path.cwd() 
     $ firsttextpath = "\\game\\notepad\\firsttext.txt"
     python:
-        firsttext = directory + firsttextpath
+        firsttext= (str(directory) + str(firsttextpath))
         print(firsttext)
+        #stack overflow is god
+        osCommandString = ("notepad.exe", str(firsttext))
+        os.system(osCommandString)
+    
+    
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
