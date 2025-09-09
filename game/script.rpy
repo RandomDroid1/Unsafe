@@ -29,20 +29,16 @@ label start:
     python:
         # thank you google for giving me the command to open stuff i hat epython https://www.geeksforgeeks.org/python/find-path-to-the-given-file-using-python/
         from pathlib import Path
-        print(Path.home())
     # This assigns the path to a variable so it can be joined with the known path next
     $ directory = Path.home() 
     $ firsttextpath = "\\Downloads\\Unsafe\\game\\notepad\\firsttext.txt"
     python:
+        import time
         firsttext= (str(directory) + str(firsttextpath))
-        print(firsttext)
         # yippee stack overflow. This is attempting to open it, finally
         osCommandString = ("notepad.exe" + " " + str(firsttext))
-        print(osCommandString)
         os.system(osCommandString)
-
-    
-    
+        time.sleep(2)
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
