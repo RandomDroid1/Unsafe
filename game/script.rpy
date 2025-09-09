@@ -10,24 +10,20 @@ define e = Character("Eileen")
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
+#start with a video of
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
-
     # These display lines of dialogue.
 
     e "You've created a new Ren'Py game."
     # worst code ever devised to open a text file, very mean
-#code for notepad saved in python for later
-        
+    init python:
+        gui.init(1920, 1080)
+        config.physical_width=1280
+        config.physical_height=720
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
